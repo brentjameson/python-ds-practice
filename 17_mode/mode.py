@@ -11,3 +11,23 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    count = 0
+    common_num = 0
+    for num in nums:
+        if nums.count(num) > count:
+            count = nums.count(num)
+            common_num = num
+    return common_num
+
+
+def mode_sb(nums):
+    counts = {}
+
+    for num in nums:
+        counts[num] = counts.get(num,0) + 1
+
+    max_value = max(counts.values())
+
+    for (num, freq) in counts.items():
+        if freq == max_value:
+            return num
