@@ -18,6 +18,9 @@ def is_palindrome(phrase):
         >>> is_palindrome('taco cat')
         True
 
-        >>> is_palindrome('Noon')
+        >>> is_palindrome('robert')
         True
     """
+
+    str_no_spaces = phrase.lower().replace(' ','')
+    return str_no_spaces == str_no_spaces[::-1]
