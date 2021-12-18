@@ -21,3 +21,20 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+
+    nums_length = len(nums)
+    x = 0
+    i = 1
+    while i < nums_length:
+        if nums[x] + nums[i] == goal:
+            # return (f"{nums}({i}),{nums}({i + 1})")
+            return (nums[x], nums[i])
+        print(x, 'i am x')
+        print(i, 'i am i')
+
+        # INFINITE LOOP BELOW. DON'T TRY IT. JUST FOR REFERENCE
+        # if i == nums_length:
+        #     i = 1
+        #     x += 1
+        #     if x == nums_length:
+        #         return ()

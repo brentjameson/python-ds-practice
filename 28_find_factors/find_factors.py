@@ -13,3 +13,8 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+
+    # loop thorugh all numbers less than or equal to num
+
+    return [int for int in set(range(1,num + 1)) if num % int == 0]
+
