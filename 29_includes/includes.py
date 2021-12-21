@@ -45,5 +45,4 @@ def includes(collection, sought, start=0):
         if collection.index(sought) >= start:
             return True
     else:
-        print('i am else statment false')
         return False
